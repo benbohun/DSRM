@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device Name="Operating System">
+  <Policies>
+    <Policy ID="WIN_DSRM_NTDSUTIL" PlatformBaseID="WinDomain" PlatformBaseProtocol="NTDSUTIL" PlatformBaseType="Windows Domain" AutoChangeOnAdd="No" AutoVerifyOnAdd="No">
+      <Properties>
+        <Required>
+          <Property Name="Username" />
+          <Property Name="Address" />
+        </Required>
+        <Optional>
+          <Property Name="UseLocalNullServer" />
+          <Property Name="NtdsutilPath" />
+          <Property Name="TimeoutSeconds" />
+        </Optional>
+      </Properties>
+      <LinkedPasswords>
+        <Link Name="LogonAccount" PropertyIndex="1" />
+        <Link Name="ReconcileAccount" PropertyIndex="3" />
+      </LinkedPasswords>
+      <TicketingSystem EnterTicketingInfo="No" ValidateTicketNumber="No" />
+    </Policy>
+  </Policies>
+</Device>
