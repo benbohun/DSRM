@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device Name="Operating System">
+  <Policies>
+    <Policy ID="WIN_DSRM_REMOTE" PlatformBaseID="WinDomain" PlatformBaseProtocol="WINRM-NTDSUTIL" PlatformBaseType="Windows Domain" AutoChangeOnAdd="No" AutoVerifyOnAdd="No">
+      <Properties>
+        <Required>
+          <Property Name="Username" />
+          <Property Name="Address" />
+        </Required>
+        <Optional>
+          <Property Name="WinRMTransport" />
+          <Property Name="WinRMAuthentication" />
+          <Property Name="WinRMPort" />
+          <Property Name="TimeoutSeconds" />
+          <Property Name="EventValidationMode" />
+          <Property Name="EventLookbackMinutes" />
+          <Property Name="RemoteNtdsutilPath" />
+        </Optional>
+      </Properties>
+      <LinkedPasswords>
+        <Link Name="LogonAccount" PropertyIndex="1" />
+      </LinkedPasswords>
+      <TicketingSystem EnterTicketingInfo="No" ValidateTicketNumber="No" />
+    </Policy>
+  </Policies>
+</Device>
